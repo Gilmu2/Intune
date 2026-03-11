@@ -1,0 +1,32 @@
+{
+  "Rules": [
+    {
+      "SettingName": "RecoveryPassword",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": "True",
+      "MoreInfoUrl": "https://www.microsoft.com",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "BitLocker protector RecoveryPassword meets conditions",
+          "Description": "BitLocker protector RecoveryPassword does not meet conditions"
+        }
+      ]
+    },
+    {
+      "SettingName": "TpmPin",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": "True",
+      "MoreInfoUrl": "https://www.microsoft.com",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "BitLocker protector TpmPin meets conditions",
+          "Description": "BitLocker protector TpmPin does not meet conditions"
+        }
+      ]
+    }
+  ]
+}
