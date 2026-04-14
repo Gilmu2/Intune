@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Uninstall Velociraptor Agent
+    Uninstall Velociraptor Agent.
 .DESCRIPTION
     Stops and removes the Velociraptor service, deletes all files and registry keys.
     Prepared for Intune Platform Script deployment - runs as SYSTEM.
