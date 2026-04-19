@@ -1,4 +1,17 @@
+# Secrets and environment (never commit)
 .env
-.git
-.gitignore
-.json
+.env.*
+!.env.example
+
+# Policy / Graph export folders (tenant-specific IDs and policy names)
+Output/
+**/Output/
+
+# Local overrides and one-off exports
+*.local.ps1
+config.local.*
+*.export.csv
+
+# OS
+.DS_Store
+Thumbs.db

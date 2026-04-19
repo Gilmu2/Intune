@@ -1,1 +1,1 @@
-﻿Invoke-Command -ComputerName ilp-tlv-adsync -Credential (Get-Credential) -ScriptBlock { Start-ADSyncSyncCycle -PolicyType Delta }
+﻿Invoke-Command -ComputerName XXX -Credential (Get-Credential) -ScriptBlock { Start-ADSyncSyncCycle -PolicyType Delta }

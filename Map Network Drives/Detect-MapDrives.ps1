@@ -1,9 +1,9 @@
 # Define required drives and paths
 $Drives = @{
-    "O" = "\\galaxy\private_builds"
-    "X" = "\\galaxy\nt-dev"
-    "Y" = "\\galaxy\ckp"
-    "Z" = "\\galaxy\all_users"
+    "O" = "\\XXX\private_builds"
+    "X" = "\\XXX\nt-dev"
+    "Y" = "\\XXX\ckp"
+    "Z" = "\\XXX\all_users"
 }
 
 $allMapped = $true

@@ -1,16 +1,24 @@
 ﻿# Install module if not installed
 # Install-Module AzureAD -Scope CurrentUser
 
+param(
+    [string]$GroupName = "<Your-Entra-Group-Display-Name>",
+    [string]$CsvPath = ""
+)
+
 Import-Module AzureAD
 
 # Connect to Azure AD
 Connect-AzureAD
 
-# Target group
-$GroupName = "SG-Intune_Endpoint_Users"
+if (-not $CsvPath) {
+    $CsvPath = Join-Path $env:TEMP "GroupMembers_Export.csv"
+}
 
-# Output CSV
-$CsvPath = "C:\Temp\SG-Intune_Endpoint_Users_Members.csv"
+if ($GroupName -match '^\<') {
+    Write-Error "Replace the default -GroupName with your Entra group display name, e.g. .\GetMemberRecursive.ps1 -GroupName 'SG-MyGroup'"
+    exit 1
+}
 
 # Recursive function to get members
 function Get-AzureADGroupMembersRecursive {
